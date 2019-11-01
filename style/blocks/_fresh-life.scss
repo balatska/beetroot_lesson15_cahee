@@ -1,0 +1,298 @@
+.fresh-life-wrap {
+    background-color: #f9f8fb;
+    width: 100%;
+    height: 1000px;     
+    display: flex;
+    justify-content: center;
+    color: $dark-text;
+    background-image: url(../images/fresh-life/bg-image.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-y: bottom;
+
+    @media screen and (max-width: 1200px) {
+        background-image: none;
+    }
+
+    .container {
+        @extend %container-settings;
+        position: relative;
+    
+        @media screen and (max-width: 1200px) {
+            width: 90%;  
+        }
+    
+        header {
+            height: 150px;
+            width: calc(100% - 30px);
+            display: flex;
+            position: absolute;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 2;
+        
+            .logo {
+                height: 60px;
+    
+                &:hover {
+                    @extend %transform;
+                }
+    
+                a {
+                    @extend %a-style;
+                    display: flex;
+                    align-items: center;
+            
+                    img {
+                        object-fit: contain;
+                        margin: 0 auto;
+                    }
+                }
+                
+            }
+            
+            .navigation {
+                width: 50%; 
+                height: 100%;
+                display: flex;
+                text-transform: uppercase;
+                align-self: center;
+                justify-content: center;
+    
+                @media screen and (max-width: 1200px) {
+                    width: 60%;  
+                }
+                
+                .menu {
+                    width: 100%;
+                    height: 100%;
+                    position: relative;
+    
+                    .nav-list {
+                        display: flex;
+                        align-items: center;
+                        text-align: center;
+                        width: 100%;
+                        list-style: none;
+                        padding: 0;
+                        margin: 0;
+                        height: 100%;
+                        position: absolute;
+    
+                        @media screen and (max-width: 960px) {
+                            display: none;  
+                        }
+                    
+                        li {
+                            // list-style: none;
+                            text-decoration: none;
+                            width: calc(100% / 6);
+                            height: 43px;
+                            // display: flex;
+                            // justify-content: center;
+                            // align-items: center; 
+                            margin-right: 10px;
+        
+                            &:last-of-type {
+                                margin-right: 0;
+                            }
+
+                            @media screen and (max-width: 960px) {
+                                background-color: rgba(255, 96, 51, 0.8);
+                                width: 100%;
+                                height: 46px;
+                                margin: 1px 0;
+                                border-radius: 4px;
+
+                                a {
+                                    line-height: 60px;
+                                }
+                            }
+        
+                            a{
+                                @extend %a-style;
+                                color: $dark-text;
+                                font-weight: 700;
+                                // width: 90%;
+                                line-height: 43px;
+                                // text-align: center;
+                                position: relative;
+        
+                                &:after {
+                                    position: absolute;
+                                    // top: 0;
+                                    left: 0;
+                                    height: 3px; 
+                                    background-color: #ff6033; 
+                                    content: "";
+                                    width: 0;
+                                }
+        
+                                &:hover:after {
+                                    width: 100%;
+                                }
+                                
+                                @media screen and (max-width: 960px) {
+                                    line-height: 60px;
+
+                                    &:hover:after {
+                                        width: 0;
+                                    }
+
+                                }
+                            }
+                        }
+                    }
+                
+                    #burger-menu {
+                        display: none;
+    
+                        &:checked ~ .burger span:first-of-type {
+                            transform: rotate(45deg);
+                            position: absolute;
+                            left: 6px;
+                        }
+                
+                        &:checked ~ .burger span:nth-of-type(2) {
+                            display: none;
+                        }
+                
+                        &:checked ~ .burger span:last-of-type {
+                            transform: rotate(-45deg);
+                            position: absolute;
+                            left: 6px;
+                        }
+
+                        &:checked ~ .nav-list {
+                            display: flex;
+                            flex-direction: column;
+                            position: absolute;
+                            width: 300px;
+                            right: 60px;
+                            height: auto;
+                        }
+                    }
+    
+                    .burger{
+                        display: none;
+                        height: 42px;
+                        width: 42px;
+                        border: none;
+                        outline: none;
+                        cursor: pointer;
+    
+                        &:hover {
+                            transform: scale(1.1);
+                        }
+    
+                        span {
+                            width: 30px;
+                            height: 4px;
+                            background-color: $dark-text;
+                            display: block;
+                        }
+                        
+                        @media screen and (max-width: 960px) {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-evenly;
+                            align-items: center;
+                            position: absolute;
+                            right: 0;
+                            top: calc(50% - 20px);
+    
+                        }
+                        
+                        
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+.fresh-life-inner {
+    display: flex;
+    height: calc(100% - 150px);
+    align-items: center;
+
+    @media screen and (max-width: 1200px) {
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .content {
+        width: 40%;
+        height: 30%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: flex-start;
+        z-index: 2;
+
+        @media screen and (max-width: 1200px) {
+            align-items: center;
+            width: 100%;
+        }
+
+        h2 {
+            font-size: 60px;
+            font-weight: $heavy;
+            text-transform: capitalize;
+            margin: 0;
+        }
+
+        p {
+            @media screen and (max-width: 1200px) {
+                text-align: center;
+                width: 60%;
+            }
+        }
+
+        .button {
+            @include button (#ff6033);
+            margin: 0;
+
+            a {
+                height: 55px;
+                color: $light-text;
+            }
+        }
+    }
+
+    .picture {
+        width: 60%;
+        height: 100%;
+        background-image: url(../images/fresh-life/bg-image.jpg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: 100% 100%;
+        overflow: hidden;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        display: none;
+        
+
+        @media screen and (max-width: 1200px) {
+            display: flex;
+            width: 80%;
+        }
+    }
+
+    .scroll {
+        display: block;
+        background-image: url(../../images/fresh-life/scroll.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        opacity: 0.6;
+        width: 48px;
+        height: 48px;
+        position: absolute;
+        bottom: 60px;
+        left: calc(50% - 24px);
+    }
+}
+

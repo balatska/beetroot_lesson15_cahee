@@ -1,0 +1,163 @@
+body {
+    margin: 0 auto;
+    font-family: 'Raleway', sans-serif;
+}
+
+.blog-wrap {
+    background-color: #b07cf7;
+    width: 100%;
+    height: 864px;    
+    display: flex;
+    justify-content: center;
+    color: #ffffff;
+
+    &>.container {
+        @extend %container-settings;
+        
+    
+        &>h2 {
+            font-size: 90px;
+            font-weight: 700;
+            margin-top: 95px;
+            margin-bottom: 15px;
+            text-align: center;
+    
+            @media screen and (max-width: 720px) {
+                font-size: 60px !important;
+            }
+        }
+    
+        p {
+            font-size: 17px;
+            font-weight: 300;
+            text-align: center;
+            width: 50%;
+            margin: 0 auto;
+            margin-bottom: 45px;
+        }
+    }
+
+    .button {
+        @include button (#f72b3b);
+        margin: auto;
+        margin-top: 50px;
+    
+        a {
+            color: $light-text;
+        }
+    }
+}
+
+
+
+.posts-wrap {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.post {
+    width: 33%;
+    height: 310px;
+    margin: 0 15px;
+    position: relative;
+    overflow: hidden;
+    @extend %shadow;
+
+    @media screen and (max-width: 720px) {
+        width: 50% !important;
+    
+            &:last-of-type {
+                display: none;
+            }
+    }   
+
+    &:hover {
+        @extend %transform;
+    }
+
+    &:nth-of-type(1) {
+        background: linear-gradient(to top, rgba(14, 15, 17, .8), rgba(14, 15, 17, 0)), url(../images/blog/img1.png);    
+    }
+
+    &:nth-of-type(2) {
+        background: linear-gradient(to top, rgba(14, 15, 17, .8), rgba(14, 15, 17, 0)), url(../../images/blog/img2.png);     
+    }
+
+    &:nth-of-type(3) {
+        background: linear-gradient(to top, rgba(14, 15, 17, .8), rgba(14, 15, 17, 0)), url(../../images/blog/img3.png);     
+    }
+
+    a {
+        @extend %a-style;
+        color: $light-text;
+
+        .date {
+            @extend %text-position;
+            margin: 0;
+            width: 60px;
+            height: 60px;
+            background-color: rgba(38, 38, 38, 0.5);
+            border-radius: 3px;
+            position: absolute;
+            top: 32px;
+            left: 30px;
+            text-align: center;
+            
+            p:first-child {
+                font-size: 32px;
+                font-weight: 700;
+                line-height: 25px;
+                margin: 0;
+                padding-top: 3px;
+            }
+        
+            p:last-child {
+                font-size: 21px;
+                font-weight: 900;
+                line-height: 25px;
+                text-transform: uppercase;
+                margin: 0;
+                padding-top: 3px;
+            }
+        }
+
+        .title {
+            @extend %text-position;
+            left: 20px;
+            bottom: 55px;
+            font-size: 20px;
+            font-weight: 700;
+            margin: 5px;
+
+            @media screen and (max-width: 960px) {
+                width: 80%;
+                top: 150px;
+            }
+        }
+            
+        .author {
+            @extend %text-position;
+            font-size: 13px;
+            left: 20px;
+            bottom: 20px;
+            padding: 5px;
+        }
+    }     
+}
+
+
+
+
+
+
+
+    
+  
+  
+
+
+
+
+
+

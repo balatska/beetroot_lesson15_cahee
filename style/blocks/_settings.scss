@@ -1,0 +1,60 @@
+$transition: all 0.2s ease;
+$dark-text: #262626;
+$light-text: #ffffff;
+$heavy: 900;
+
+%button-style {
+    width: 200px;
+    height: 55px;
+    text-align: center;
+    border-radius: 4px;
+}
+
+%a-style {
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+%container-settings {
+    max-width: 1200px;
+    width: 100%;
+    align-items: center;
+    padding: 15px;
+    
+}
+
+%transform {
+    transform: scale(1.02);
+    transition: $transition;
+}
+
+%shadow {
+    box-shadow: 0 2px 5px #363636;
+    transition: $transition;
+}
+
+%text-position {
+    position: absolute;
+    z-index: 2;  
+}
+
+@mixin button ($bg-color) {
+    @extend %button-style;
+    @extend %shadow;
+
+    background-color: $bg-color;
+
+    &:hover {
+        @extend %transform;
+    }
+
+    a {
+        @extend %a-style;
+        text-transform: uppercase;
+        line-height: 55px;
+    }
+}
+
+
