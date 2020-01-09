@@ -224,7 +224,7 @@
         width: 80%; } }
   .fresh-life-inner .scroll {
     display: block;
-    background-image: url(../../images/fresh-life/scroll.png);
+    background-image: url(../images/fresh-life/scroll.png);
     background-repeat: no-repeat;
     background-position: center;
     opacity: 0.6;
@@ -253,7 +253,7 @@
   .about-us-inner .picture {
     width: 50%;
     height: 100%;
-    background-image: url(../../images/about-us/bg-img.png);
+    background-image: url(../images/about-us/bg-img.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center; }
@@ -341,7 +341,7 @@
   .our-services-inner .picture {
     width: 50%;
     height: 100%;
-    background-image: url(../../images/our-services/bg-img.png);
+    background-image: url(../images/our-services/bg-img.png);
     background-repeat: no-repeat;
     background-position-x: 30%;
     background-position-y: 30%;
@@ -497,9 +497,9 @@ body {
   .post:nth-of-type(1) {
     background: linear-gradient(to top, rgba(14, 15, 17, 0.8), rgba(14, 15, 17, 0)), url(../images/blog/img1.png); }
   .post:nth-of-type(2) {
-    background: linear-gradient(to top, rgba(14, 15, 17, 0.8), rgba(14, 15, 17, 0)), url(../../images/blog/img2.png); }
+    background: linear-gradient(to top, rgba(14, 15, 17, 0.8), rgba(14, 15, 17, 0)), url(../images/blog/img2.png); }
   .post:nth-of-type(3) {
-    background: linear-gradient(to top, rgba(14, 15, 17, 0.8), rgba(14, 15, 17, 0)), url(../../images/blog/img3.png); }
+    background: linear-gradient(to top, rgba(14, 15, 17, 0.8), rgba(14, 15, 17, 0)), url(../images/blog/img3.png); }
   .post a {
     color: #ffffff; }
     .post a .date {
@@ -547,7 +547,7 @@ body {
   display: flex;
   justify-content: center;
   color: #262626;
-  background-image: url(../../images/contact/bg-img.png);
+  background-image: url(../images/contact/bg-img.png);
   background-size: cover;
   background-repeat: no-repeat; }
 
